@@ -13,7 +13,7 @@
     <a href="https://github.com/mireaMegaman/ww_hack/issues">Предложить улучшение</a>
   </p>
   <p align="center">
-    <h3>Всероссийский этап. Москва 2023
+    <h3>Международный этап. Москва 2023
     <br />
     <h3>
     <br />

@@ -76,7 +76,7 @@ class  MainDeskState extends State<MainDesktop>{
             File('./responce/$filename')
             ..createSync(recursive: true)
             ..writeAsBytesSync(data);
-            if (filename.contains('bbox_img')) {
+            if (filename.contains('bbox_')) {
               bboxImgs.add('./responce/$filename');
             }
           }
@@ -720,7 +720,7 @@ class  MainDeskState extends State<MainDesktop>{
                                                           Padding(
                                                             padding: EdgeInsets.all(5),
                                                       
-                                                            child: Text("test", style: TextStyle(color: const Color.fromARGB(255, 14, 28, 17),),),
+                                                            child: Text("test", style: TextStyle(color: Color.fromARGB(255, 14, 28, 17),),),
                                                           ),
                                                         )),
                                                         gridLinesVisibility: GridLinesVisibility.both,
@@ -742,9 +742,9 @@ class  MainDeskState extends State<MainDesktop>{
                                             setState(() {
                                               
                                             });
-                                            print(selectedRow);
-                                            print(selectedIndex);
-                                            print(selectedRow?.getCells()[2].value);
+                                            // print(selectedRow);
+                                            // print(selectedIndex);
+                                            // print(selectedRow?.getCells()[2].value);
                                           },
                                           color: const Color(0xFF62CA76),
                                           elevation: 0,
@@ -785,8 +785,8 @@ class  MainDeskState extends State<MainDesktop>{
                                   ),
                               )
                           ),
-            // ---------------------------------------------------------------------------------------------- //
-            // ---------------------------------------------------------------------------------------------- //
+// ---------------------------------------------------------------------------------------------- //
+// ---------------------------------------------------------------------------------------------- //
                           ConstrainedBox(constraints: const BoxConstraints(minWidth: 300, maxWidth: 700),
                             child: 
                             Column(
@@ -797,7 +797,6 @@ class  MainDeskState extends State<MainDesktop>{
                                 Container(
                                   height: 470,
                                   width: 650,
-                                  
                                   margin: const EdgeInsets.all(20.0),
                                   decoration: BoxDecoration(
                                     border: Border.all(color: const Color(0xFF62CA76)),
@@ -862,52 +861,6 @@ class  MainDeskState extends State<MainDesktop>{
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                                                                                                  
-                                                                                  // Row(
-                                                                                  //   mainAxisAlignment: MainAxisAlignment.center,
-                                                                                  //   crossAxisAlignment: CrossAxisAlignment.center,
-                                                                                  //   mainAxisSize: MainAxisSize.min,
-                                                                                  //   children: [
-                                                                                  //     Padding(
-                                                                                  //       padding: const EdgeInsets.fromLTRB(8, 0, 16, 0),
-                                                                                  //       child:  IconButton(
-                                                                                  //         icon: const Icon(
-                                                                                  //           Icons.keyboard_double_arrow_left_rounded,
-                                                                                  //           color: Color(0xFFF3F2F3),
-                                                                                  //           size: 30,
-                                                                                  //         ),
-                                                                                  //         onPressed: () {
-                                                                                  //           if (_imageController.hasClients) {
-                                                                                  //             _imageController.animateToPage(
-                                                                                  //               index-1,
-                                                                                  //               duration: const Duration(milliseconds: 400),
-                                                                                  //               curve: Curves.easeInOut,
-                                                                                  //             );
-                                                                                  //           }
-                                                                                  //         },
-                                                                                  //       ),
-                                                                                  //     ),
-                                                                                  //     Padding(
-                                                                                  //       padding: const EdgeInsets.fromLTRB(8, 0, 16, 0),
-                                                                                  //       child:  IconButton(
-                                                                                  //         icon: const Icon(
-                                                                                  //           Icons.keyboard_double_arrow_right_rounded ,
-                                                                                  //           color: Color(0xFFF3F2F3),
-                                                                                  //           size: 30,
-                                                                                  //         ),
-                                                                                  //         onPressed: () {
-                                                                                  //           if (_imageController.hasClients) {
-                                                                                  //             _imageController.animateToPage(
-                                                                                  //               index+1,
-                                                                                  //               duration: const Duration(milliseconds: 400),
-                                                                                  //               curve: Curves.easeInOut,
-                                                                                  //             );
-                                                                                  //           }
-                                                                                  //         },
-                                                                                  //       ),
-                                                                                  //     ),
-                                                                                  //   ],
-                                                                                  // ),
                                                                                 ],
                                                                               ),
                                                                         ),
@@ -915,26 +868,6 @@ class  MainDeskState extends State<MainDesktop>{
                                                                     );
                                                                   },
                                                                 ),
-                                                                // Align(
-                                                                //   alignment: Alignment.bottomCenter,
-                                                                //   child: Padding(
-                                                                //     padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                                                //     child: SmoothPageIndicator(
-                                                                //       controller: _imageController ,
-                                                                //       count: bboxImgs.length,
-                                                                //       axisDirection: Axis.horizontal,
-                                                                //       effect: const ExpandingDotsEffect(
-                                                                //         dotColor: Color(0xFF224429),
-                                                                //         activeDotColor: Color(0xFF62CA76),
-                                                                //         dotHeight: 10,
-                                                                //         dotWidth: 10,
-                                                                //         radius: 16,
-                                                                //         spacing: 7,
-                                                                //         expansionFactor: 2,
-                                                                //       ),
-                                                                //     ),
-                                                                //   ),
-                                                                // ),
                                                                 const Align(
                                                                   alignment: Alignment.topCenter,
                                                                   child: Padding(
@@ -1047,29 +980,29 @@ class  MainDeskState extends State<MainDesktop>{
                                                 mainAxisSize: MainAxisSize.min,
                                                 children: [
                                                   Padding(
-                                                    padding: const EdgeInsets.fromLTRB(8, 0, 16, 0),
-                                                    child:  IconButton(
-                                                      icon: const Icon(
-                                                        Icons.add_circle_outlined,
-                                                        color: Color(0xFF62CA76),
-                                                        size: 30,
-                                                      ),
-                                                      onPressed: () {
+                                                    padding: const EdgeInsets.all(3),
+                                                    child: MaterialButton(
+                                                      onPressed: ()  {
                                                         
                                                       },
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding: const EdgeInsets.fromLTRB(8, 0, 16, 0),
-                                                    child:  IconButton(
-                                                      icon: const Icon(
-                                                        Icons.remove_circle_outlined,
-                                                        color: Color(0xFF62CA76),
-                                                        size: 30,
-                                                      ),
-                                                      onPressed: () {
+                                                      color: const Color(0xFF62CA76),
+                                                      elevation: 0,
+                                                      shape: RoundedRectangleBorder(
+                                                        borderRadius: BorderRadius.circular(20.0),
                                                         
-                                                      },
+                                                      ),
+                                                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                                      textColor: const Color(0xFF181818),
+                                                      height: 50,
+                                                      minWidth: 160,
+                                                      child: const Text(
+                                                        "Есть ошибка",
+                                                        style: TextStyle(
+                                                          fontSize: 18,
+                                                          fontWeight: FontWeight.w600,
+                                                          fontStyle: FontStyle.normal,
+                                                        ),
+                                                      ),
                                                     ),
                                                   ),
                                                 ],

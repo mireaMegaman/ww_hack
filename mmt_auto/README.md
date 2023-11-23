@@ -1,16 +1,18 @@
 # mmt_auto
 
-A new Flutter project.
+Приложение-демо для Хакатона Цифровой прорыв. Команда megamen
 
-## Getting Started
+flutter dev - Lunyakov Alexey
 
-This project is a starting point for a Flutter application.
+## Немного о приложении
 
-A few resources to get you started if this is your first Flutter project:
+Приложение может помочь продемонстрировать работу модели для обработки видеопотоков транспорта. 
+Также есть функционал для распознавания по фотографии и работы с RTSP-потоками.
+
+Полезные ссылки по языку Flutter:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Официальная документация Flutter^
+[online documentation](https://docs.flutter.dev/)

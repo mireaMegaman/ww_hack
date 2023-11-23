@@ -775,7 +775,7 @@ class  MainMobState extends State<MainMobile>{
                                                                   scrollDirection: Axis.horizontal,
                                                                   itemCount: 1,
                                                                   itemBuilder: (context, index) {
-                                                                    return Align(
+                                                                    return const Align(
                                                                       alignment: Alignment.center,
                                                                       child: Padding(
                                                                         padding: const EdgeInsets.symmetric(

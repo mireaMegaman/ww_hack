@@ -307,6 +307,7 @@ class Megamen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  
                   Container(
                     margin: const EdgeInsets.all(10),
                     padding: const EdgeInsets.all(0),
@@ -314,7 +315,7 @@ class Megamen extends StatelessWidget {
                     height: 280,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(168, 24, 24, 24),
+                      color: const Color.fromARGB(168, 24, 24, 24),
                       shape: BoxShape.rectangle,
                       borderRadius: BorderRadius.circular(10.0),
                       border: Border.all(color: const Color(0xFF224429), width: 2),
@@ -337,8 +338,8 @@ class Megamen extends StatelessWidget {
                                 children: [
                                   Image(
                                     image: AssetImage("assets/images/vlad.png"),
-                                    height: 90,
-                                    width: 90,
+                                    height: 110,
+                                    width: 110,
                                     fit: BoxFit.contain,
                                   ),
                                   Padding(
@@ -376,12 +377,23 @@ class Megamen extends StatelessWidget {
                                             ),
                                           ),
                                         ),
+                                        
                                       ],
                                     ),
                                   ),
                                 ],
                               ),
                             ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(100, 0, 100, 0),
+                          child: Divider(
+                            height: 2,
+                            thickness: 2,
+                            indent: 20,
+                            endIndent: 0,
+                            color: Color(0xFF224429),
                           ),
                         ),
                         Center(
@@ -397,8 +409,8 @@ class Megamen extends StatelessWidget {
                                   
                                   Image(
                                     image: AssetImage("assets/images/egor.png"),
-                                    height: 90,
-                                    width: 90,
+                                    height: 110,
+                                    width: 110,
                                     fit: BoxFit.contain,
                                   ),
                                   Padding(
@@ -452,6 +464,16 @@ class Megamen extends StatelessWidget {
                             ),
                           ),
                         ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(100, 0, 100, 0),
+                          child: Divider(
+                            height: 2,
+                            thickness: 2,
+                            indent: 20,
+                            endIndent: 0,
+                            color: Color(0xFF224429),
+                          ),
+                        ),
                         Center(
                           child: Padding(
                             padding: EdgeInsets.all(10),
@@ -465,8 +487,8 @@ class Megamen extends StatelessWidget {
                                   
                                   Image(
                                     image: AssetImage("assets/images/alexandr.png"),
-                                    height: 90,
-                                    width: 90,
+                                    height: 110,
+                                    width: 110,
                                     fit: BoxFit.contain,
                                   ),
                                   Padding(
@@ -520,6 +542,16 @@ class Megamen extends StatelessWidget {
                             ),
                           ),
                         ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(100, 0, 100, 0),
+                          child: Divider(
+                            height: 2,
+                            thickness: 2,
+                            indent: 20,
+                            endIndent: 0,
+                            color: Color(0xFF224429),
+                          ),
+                        ),
                         Center(
                           child: Padding(
                             padding: EdgeInsets.all(10),
@@ -533,8 +565,8 @@ class Megamen extends StatelessWidget {
                                   
                                   Image(
                                     image: AssetImage("assets/images/alex.png"),
-                                    height: 90,
-                                    width: 90,
+                                    height: 110,
+                                    width: 110,
                                     fit: BoxFit.contain,
                                   ),
                                   Padding(
@@ -583,7 +615,7 @@ class Megamen extends StatelessWidget {
                   const Divider(
                     color: Color(0xff000000),
                     height: 16,
-                    thickness: 2,
+                    thickness: 5,
                     indent: 0,
                     endIndent: 0,
                   ),

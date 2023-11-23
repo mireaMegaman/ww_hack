@@ -27,7 +27,6 @@ class Image64(BaseModel):
 
 class Video(BaseModel):
     file: str
-    name: str
 
 
 class RTSP(BaseModel):
@@ -94,30 +93,42 @@ def image_detection(file: Image64, background: BackgroundTasks):
     return to_zip(path_files + 'results/')
 
 
+# @app.post('/video')
+# def video_traking(input: Video, background: BackgroundTasks):
+#     image_as_bytes = str.encode(input.file)
+#     img_recovered = base64.b64decode(image_as_bytes)
+#     image = Image.open(io.BytesIO(img_recovered))
+#     input_file_path = parent_dir + '/videos/original/' + f"{input.name}.mp4"
+#     _ = image.save(input_file_path)
+#     output_path_file = parent_dir + '/videos/results/' + f"result_{input.file}.mp4"
+#     tracking(
+#         model=model,
+#         conf=0.4,
+#         input_filename=input_file_path,
+#         output_filename=output_path_file
+#     )
+#     background.add_task(remove_file, parent_dir + '/videos/results/')
+#     return to_zip(parent_dir + '/videos/results/')
+
+
 @app.post('/video')
-def video_traking(input: Video, background: BackgroundTasks):
-    image_as_bytes = str.encode(input.file)
-    img_recovered = base64.b64decode(image_as_bytes)
-    image = Image.open(io.BytesIO(img_recovered))
-    input_file_path = parent_dir + '/videos/original/' + f"{input.name}.mp4"
-    _ = image.save(input_file_path)
+def video_traking(input: Video):
     output_path_file = parent_dir + '/videos/results/' + f"result_{input.file}.mp4"
     tracking(
         model=model,
         conf=0.4,
-        input_filename=input_file_path,
+        input_filename=input.file,
         output_filename=output_path_file
     )
-    background.add_task(remove_file, parent_dir + '/videos/results/')
     return to_zip(parent_dir + '/videos/results/')
 
 
 @app.post('/rtsp')
-def online_tracking(input: Video):
+def online_tracking(input: RTSP):
     return {"message": "Something"}
 
 
 @app.post('/active_learning')
-def active_learning(input: RTSP):
+def active_learning(input: Image):
     print(input.url)
     return {"message": "Something"}

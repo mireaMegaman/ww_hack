@@ -861,51 +861,6 @@ class  MainDeskState extends State<MainDesktop>{
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  // Row(
-                                                                                  //   mainAxisAlignment: MainAxisAlignment.center,
-                                                                                  //   crossAxisAlignment: CrossAxisAlignment.center,
-                                                                                  //   mainAxisSize: MainAxisSize.min,
-                                                                                  //   children: [
-                                                                                  //     Padding(
-                                                                                  //       padding: const EdgeInsets.fromLTRB(8, 0, 16, 0),
-                                                                                  //       child:  IconButton(
-                                                                                  //         icon: const Icon(
-                                                                                  //           Icons.keyboard_double_arrow_left_rounded,
-                                                                                  //           color: Color(0xFFF3F2F3),
-                                                                                  //           size: 30,
-                                                                                  //         ),
-                                                                                  //         onPressed: () {
-                                                                                  //           if (_imageController.hasClients) {
-                                                                                  //             _imageController.animateToPage(
-                                                                                  //               index-1,
-                                                                                  //               duration: const Duration(milliseconds: 400),
-                                                                                  //               curve: Curves.easeInOut,
-                                                                                  //             );
-                                                                                  //           }
-                                                                                  //         },
-                                                                                  //       ),
-                                                                                  //     ),
-                                                                                  //     Padding(
-                                                                                  //       padding: const EdgeInsets.fromLTRB(8, 0, 16, 0),
-                                                                                  //       child:  IconButton(
-                                                                                  //         icon: const Icon(
-                                                                                  //           Icons.keyboard_double_arrow_right_rounded ,
-                                                                                  //           color: Color(0xFFF3F2F3),
-                                                                                  //           size: 30,
-                                                                                  //         ),
-                                                                                  //         onPressed: () {
-                                                                                  //           if (_imageController.hasClients) {
-                                                                                  //             _imageController.animateToPage(
-                                                                                  //               index+1,
-                                                                                  //               duration: const Duration(milliseconds: 400),
-                                                                                  //               curve: Curves.easeInOut,
-                                                                                  //             );
-                                                                                  //           }
-                                                                                  //         },
-                                                                                  //       ),
-                                                                                  //     ),
-                                                                                  //   ],
-                                                                                  // ),
                                                                                 ],
                                                                               ),
                                                                         ),
@@ -1025,29 +980,29 @@ class  MainDeskState extends State<MainDesktop>{
                                                 mainAxisSize: MainAxisSize.min,
                                                 children: [
                                                   Padding(
-                                                    padding: const EdgeInsets.fromLTRB(8, 0, 16, 0),
-                                                    child:  IconButton(
-                                                      icon: const Icon(
-                                                        Icons.add_circle_outlined,
-                                                        color: Color(0xFF62CA76),
-                                                        size: 30,
-                                                      ),
-                                                      onPressed: () {
+                                                    padding: const EdgeInsets.all(3),
+                                                    child: MaterialButton(
+                                                      onPressed: ()  {
                                                         
                                                       },
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding: const EdgeInsets.fromLTRB(8, 0, 16, 0),
-                                                    child:  IconButton(
-                                                      icon: const Icon(
-                                                        Icons.remove_circle_outlined,
-                                                        color: Color(0xFF62CA76),
-                                                        size: 30,
-                                                      ),
-                                                      onPressed: () {
+                                                      color: const Color(0xFF62CA76),
+                                                      elevation: 0,
+                                                      shape: RoundedRectangleBorder(
+                                                        borderRadius: BorderRadius.circular(20.0),
                                                         
-                                                      },
+                                                      ),
+                                                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                                      textColor: const Color(0xFF181818),
+                                                      height: 50,
+                                                      minWidth: 160,
+                                                      child: const Text(
+                                                        "Есть ошибка",
+                                                        style: TextStyle(
+                                                          fontSize: 18,
+                                                          fontWeight: FontWeight.w600,
+                                                          fontStyle: FontStyle.normal,
+                                                        ),
+                                                      ),
                                                     ),
                                                   ),
                                                 ],

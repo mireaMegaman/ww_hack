@@ -113,6 +113,7 @@ def image_detection(file: Image64, background: BackgroundTasks):
 
 @app.post('/video')
 def video_traking(input: Video):
+    json_ans = {"data": [{'id': 1, 'image_path': input.file, 'autotype' : 'car', 'pollution': 57, 'count': 3}]}
     output_path_file = parent_dir + '/videos/results/' + f"result_{input.file}.mp4"
     tracking(
         model=model,
@@ -120,6 +121,8 @@ def video_traking(input: Video):
         input_filename=input.file,
         output_filename=output_path_file
     )
+    with open(parent_dir + '/results/' + 'data.txt', 'w') as outfile:
+        json.dump(json_ans, outfile)
     return to_zip(parent_dir + '/videos/results/')
 
 
@@ -129,6 +132,6 @@ def online_tracking(input: RTSP):
 
 
 @app.post('/active_learning')
-def active_learning(input: Image):
+def active_learning(input: RTSP):
     print(input.url)
     return {"message": "Something"}

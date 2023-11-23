@@ -75,7 +75,7 @@ def tracking(
         # cv2.imshow("Frame", frame)
         cv2.imshow("Frame", res_plotted)
         writer.write(res_plotted)
-        if cv2.waitKey(1) == ord("q"):
+        if cv2.waitKey(0):
             break
 
     video_cap.release()

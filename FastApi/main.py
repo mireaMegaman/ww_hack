@@ -121,7 +121,7 @@ def video_traking(input: Video):
         input_filename=input.file,
         output_filename=output_path_file
     )
-    with open(parent_dir + '/results/' + 'data.txt', 'w') as outfile:
+    with open(parent_dir + '/videos/results/' + 'data.txt', 'w') as outfile:
         json.dump(json_ans, outfile)
     return to_zip(parent_dir + '/videos/results/')
 

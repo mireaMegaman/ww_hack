@@ -76,7 +76,7 @@ class  MainDeskState extends State<MainDesktop>{
             File('./responce/$filename')
             ..createSync(recursive: true)
             ..writeAsBytesSync(data);
-            if (filename.contains('bbox_img')) {
+            if (filename.contains('bbox_')) {
               bboxImgs.add('./responce/$filename');
             }
           }
@@ -720,7 +720,7 @@ class  MainDeskState extends State<MainDesktop>{
                                                           Padding(
                                                             padding: EdgeInsets.all(5),
                                                       
-                                                            child: Text("test", style: TextStyle(color: const Color.fromARGB(255, 14, 28, 17),),),
+                                                            child: Text("test", style: TextStyle(color: Color.fromARGB(255, 14, 28, 17),),),
                                                           ),
                                                         )),
                                                         gridLinesVisibility: GridLinesVisibility.both,
@@ -742,9 +742,9 @@ class  MainDeskState extends State<MainDesktop>{
                                             setState(() {
                                               
                                             });
-                                            print(selectedRow);
-                                            print(selectedIndex);
-                                            print(selectedRow?.getCells()[2].value);
+                                            // print(selectedRow);
+                                            // print(selectedIndex);
+                                            // print(selectedRow?.getCells()[2].value);
                                           },
                                           color: const Color(0xFF62CA76),
                                           elevation: 0,
@@ -785,8 +785,8 @@ class  MainDeskState extends State<MainDesktop>{
                                   ),
                               )
                           ),
-            // ---------------------------------------------------------------------------------------------- //
-            // ---------------------------------------------------------------------------------------------- //
+// ---------------------------------------------------------------------------------------------- //
+// ---------------------------------------------------------------------------------------------- //
                           ConstrainedBox(constraints: const BoxConstraints(minWidth: 300, maxWidth: 700),
                             child: 
                             Column(
@@ -797,7 +797,6 @@ class  MainDeskState extends State<MainDesktop>{
                                 Container(
                                   height: 470,
                                   width: 650,
-                                  
                                   margin: const EdgeInsets.all(20.0),
                                   decoration: BoxDecoration(
                                     border: Border.all(color: const Color(0xFF62CA76)),
@@ -862,7 +861,6 @@ class  MainDeskState extends State<MainDesktop>{
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                                                                                                  
                                                                                   // Row(
                                                                                   //   mainAxisAlignment: MainAxisAlignment.center,
                                                                                   //   crossAxisAlignment: CrossAxisAlignment.center,
@@ -915,26 +913,6 @@ class  MainDeskState extends State<MainDesktop>{
                                                                     );
                                                                   },
                                                                 ),
-                                                                // Align(
-                                                                //   alignment: Alignment.bottomCenter,
-                                                                //   child: Padding(
-                                                                //     padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                                                //     child: SmoothPageIndicator(
-                                                                //       controller: _imageController ,
-                                                                //       count: bboxImgs.length,
-                                                                //       axisDirection: Axis.horizontal,
-                                                                //       effect: const ExpandingDotsEffect(
-                                                                //         dotColor: Color(0xFF224429),
-                                                                //         activeDotColor: Color(0xFF62CA76),
-                                                                //         dotHeight: 10,
-                                                                //         dotWidth: 10,
-                                                                //         radius: 16,
-                                                                //         spacing: 7,
-                                                                //         expansionFactor: 2,
-                                                                //       ),
-                                                                //     ),
-                                                                //   ),
-                                                                // ),
                                                                 const Align(
                                                                   alignment: Alignment.topCenter,
                                                                   child: Padding(
